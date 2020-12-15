@@ -1,0 +1,36 @@
+package ${modelPackage};
+
+#if (${hasDate})
+import java.util.Date;
+#end
+#if (${hasBigdecimal})
+import java.math.BigDecimal;
+#end
+import com.baj.newretail.common.mybatis.annotation.MyColumn;
+import com.baj.newretail.common.mybatis.annotation.MyTable;
+import com.baj.newretail.common.mybatis.domain.AbstractDataDomain;
+import lombok.Data;
+
+/**
+ * <p>
+ *${remark}
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Data
+@MyTable("${databaseName}.${tableName}")
+public class ${beanName}DO extends AbstractDataDomain  {
+#foreach ($item in $columns)
+#if($item.lowerProperty !='id' && $item.lowerProperty !='creatorId' && $item.lowerProperty !='createTime' && $item.lowerProperty !='lastModifierId' && $item.lowerProperty !='modifiedTime' && $item.lowerProperty !='deleted')
+#if (${item.remark} && ${item.remark}!='' )
+    /**
+     * $!{item.remark}
+     */
+#end
+    @MyColumn("$!{item.column}")
+    private $!{item.type} $!{item.lowerProperty};
+#end
+#end}

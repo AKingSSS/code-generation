@@ -1,0 +1,22 @@
+package ${mapperPackage};
+
+import ${dtoPackage}.${beanName}Dto;
+import ${queryPackage}.${beanName}Query;
+import ${modelPackage}.${beanName}DO;
+import ${managerPackage}.${beanName}Manager;
+import ${servicePackage}.write.${beanName}WriteService;
+import com.baj.newretail.xhcrm.base.service.impl.BaseWriteServiceImpl;
+import org.apache.dubbo.config.annotation.Service;
+
+/**
+ * <p>
+ * ${remark}WriteService
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Service(version = "",retries = -1)
+public class  ${beanName}WriteServiceImpl extends BaseWriteServiceImpl<${beanName}DO,${beanName}Dto,${beanName}Query,${beanName}Manager> implements ${beanName}WriteService {
+}

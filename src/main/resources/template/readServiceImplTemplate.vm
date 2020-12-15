@@ -1,0 +1,23 @@
+package ${mapperPackage};
+
+
+import ${dtoPackage}.${beanName}Dto;
+import ${queryPackage}.${beanName}Query;
+import ${modelPackage}.${beanName}DO;
+import ${servicePackage}.read.${beanName}ReadService;
+import ${managerPackage}.${beanName}Manager;
+import com.baj.newretail.xhcrm.base.service.impl.BaseReadServiceImpl;
+import org.apache.dubbo.config.annotation.Service;
+
+/**
+ * <p>
+ * ${remark}ReadService
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Service(version = "")
+public class  ${beanName}ReadServiceImpl extends BaseReadServiceImpl<${beanName}DO,${beanName}Dto,${beanName}Query,${beanName}Manager> implements ${beanName}ReadService {
+}

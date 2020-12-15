@@ -1,0 +1,36 @@
+package ${modelPackage};
+
+#if (${hasDate})
+import java.util.Date;
+#end
+#if (${hasBigdecimal})
+import java.math.BigDecimal;
+#end
+import java.io.Serializable;
+import lombok.Data;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+/**
+ * <p>
+ *${remark}
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Data
+@ApiModel("$!{remark}")
+public class ${beanName}Dto implements Serializable {
+    private static final long serialVersionUID = -4415234688476992412L;
+
+#foreach ($item in $columns)
+#if (${item.remark} && ${item.remark}!='' )
+    /**
+     * $!{item.remark}
+     */
+#end
+    @ApiModelProperty("$!{item.remark}")
+    private $!{item.type} $!{item.lowerProperty};
+#end}

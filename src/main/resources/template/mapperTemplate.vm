@@ -1,0 +1,19 @@
+package ${mapperPackage};
+
+import ${modelPackage}.${beanName}DO;
+import com.baj.newretail.common.mybatis.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
+
+/**
+ * <p>
+ *
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Mapper
+public interface ${beanName}Mapper extends BaseMapper<${beanName}DO>  {
+
+}

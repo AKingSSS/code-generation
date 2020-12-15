@@ -1,0 +1,20 @@
+package ${mapperPackage};
+
+import ${modelPackage}.${beanName}DO;
+import ${mapperPackage}.${beanName}Mapper;
+import com.baj.newretail.common.mybatis.service.BaseService;
+import org.springframework.stereotype.Service;
+
+/**
+ * <p>
+ *
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+@Service
+public class ${beanName}Manager extends BaseService<${beanName}Mapper,${beanName}DO> {
+
+}

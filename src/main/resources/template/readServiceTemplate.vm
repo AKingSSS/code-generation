@@ -1,0 +1,18 @@
+package ${mapperPackage};
+
+import ${dtoPackage}.${beanName}Dto;
+import ${queryPackage}.${beanName}Query;
+import com.baj.newretail.xhcrm.base.service.BaseReadService;
+
+/**
+ * <p>
+ * ${remark}Service
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+public interface ${beanName}ReadService extends BaseReadService<${beanName}Dto,${beanName}Query> {
+
+}

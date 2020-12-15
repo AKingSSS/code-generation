@@ -1,0 +1,22 @@
+database:
+  url: jdbc:mysql://192.168.227.11:3306/platform_xhcrm
+  driver: com.mysql.jdbc.Driver
+  username: bnqbt
+  password: dev2018@Bnq
+  poolSize: 1
+generateTable:
+  enable: true
+  targetDir: ./src/result/
+  modelPackage: com.baj.newretail.xhcrm.domain
+  dtoPackage: com.baj.newretail.xhcrm.dto
+  queryPackage: com.baj.newretail.xhcrm.query
+  mapperPackage: com.baj.newretail.xhcrm.mapper
+  servicePackage: com.baj.newretail.xhcrm.service
+
+  beanJsonPackage: com.baj.newretail.xhcrm.json
+  managerPackage: com.baj.newretail.xhcrm.manager
+  examplePackage: com.baj.newretail.xhcrm
+  daoPackage: com.baj.newretail.xhcrm
+  xmlPackage: resources.sqlmap
+  primaryKey: id
+generateController: false

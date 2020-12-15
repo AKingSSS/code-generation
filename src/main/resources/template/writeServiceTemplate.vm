@@ -1,0 +1,17 @@
+package ${mapperPackage};
+
+import ${dtoPackage}.${beanName}Dto;
+import com.baj.newretail.xhcrm.base.service.BaseWriteService;
+
+/**
+ * <p>
+ * ${remark}Service
+ * </p>
+ * 
+ * @author yangkang
+ * @date ${dateTime}
+ * @version
+ */
+public interface ${beanName}WriteService extends BaseWriteService<${beanName}Dto> {
+
+}
